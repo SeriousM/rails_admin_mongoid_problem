@@ -3,20 +3,20 @@ source 'https://rubygems.org'
 # force ruby to be installed in a specific version - dont write it in the same line
 ruby '1.9.3'
 
-gem 'rails', '3.2.12'                             # rails as framework
+gem 'rails', '3.2.12'
 
-gem 'jquery-rails', '2.2.0'                       # the jquery library for rails
-gem 'bootstrap-sass', '2.2.2'                     # bootstrap from twitter - sass
+gem 'jquery-rails', '2.2.0'
+gem 'bootstrap-sass', '2.2.2'
 
-gem 'rails_admin', '0.4.5'                        # a administration dashboard ready to use
+gem 'rails_admin', '0.4.5'
 
-gem 'mongoid', '3.1.2'                            # the mongodb orm mapper and driver (moped included)
-gem 'bson_ext'                                    # the c-libraries for bson (for faster execution)
+gem 'mongoid', '3.1.2'
+gem 'bson_ext'
 
 group :assets do
-  gem 'sass-rails', '3.2.6'                       # the precompiler for sass files
-  gem 'coffee-rails', '3.2.2'                     # the precompiler for coffee files
-  gem 'uglifier', '1.3.0'                         # a compression library for css and js
+  gem 'sass-rails', '3.2.6'
+  gem 'coffee-rails', '3.2.2'
+  gem 'uglifier', '1.3.0'
 end
 
 group :development do
