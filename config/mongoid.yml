@@ -1,0 +1,26 @@
+# check it first with http://yaml-online-parser.appspot.com/ if valid!
+development:
+  sessions:
+    default:
+      uri: mongodb://localhost:27017/rails_admin_problem_dev
+      options:
+        safe: true
+test:
+  sessions:
+    default:
+      uri: mongodb://localhost:27017/rails_admin_problem_test
+      options:
+        safe: true
+        consistency: :strong
+        # In the test environment we lower the retries and retry interval to
+        # low amounts for fast failures.
+        max_retries: 1
+        retry_interval: 0
+# disabled due parsing errors while using erb inside.
+production:
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
+      options:
+        skip_version_check: true
+        safe: true
